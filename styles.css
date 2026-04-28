@@ -1,3 +1,10 @@
 body {
   margin: 0px
 }
+.footer-overflow-container {
+  visibility: hidden
+  height: 0px
+}
+main > div > div > div {
+  height: 83%
+}
