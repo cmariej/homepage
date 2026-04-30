@@ -1,0 +1,88 @@
+@use 'variables' as *;
+
+.home {
+    background-color: $color-green-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0 5rem 0;
+
+    div {
+        max-height:fit-content;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+
+    p {
+        margin: 0.75rem 0;
+    }
+
+    .pic-container {
+        width: 7rem;
+        min-height: 7rem;
+        align-self: center;
+        background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right bottom, $color-green-lighter, $color-green-medium) border-box;
+        border-radius: 50em;
+        border: 8px solid transparent;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-white;
+        margin-bottom: 2.5rem;
+
+        .pic {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+    }
+
+    
+    .title {
+        color: $color-green-dark;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: $font-size-title;
+    }
+
+    .subtitle {
+        color: $color-grey-dark;
+        font-family: $font-family-default;
+        font-size: $font-size-subtitle;
+    }
+
+    .text {
+        color: $color-grey-medium;
+        font-family: $font-family-default;
+        font-size: $font-size-text;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        font:unset;
+        align-items: center;
+        gap: 20px;
+        margin: 2.5rem 0;
+        
+        .button {
+            font-family: $font-family-default;
+            font-size: $font-size-button;
+            font-weight: 500;
+            color: $color-white;
+            background: linear-gradient(to right, $color-green-medium 50%, $color-green-dark);
+            text-decoration: none; 
+            border-radius: 10em;
+            border: 0px solid transparent;
+            padding: 10px 20px;
+
+            &.reverse-design {
+                color: $color-green-medium;
+                background: $color-green-light;
+                border: 2px solid $color-green-lighter;
+            }
+        } 
+        
+    }
+}

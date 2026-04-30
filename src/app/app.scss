@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+.to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: $color-green-dark;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}

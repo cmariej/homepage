@@ -1,0 +1,48 @@
+@use 'variables' as *;
+
+
+.navbar{
+    padding: 1rem 24rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar-logo {
+        display: flex;
+        align-items: center;
+        min-height: fit-content;
+    }
+
+    div {
+        min-height: 50px;
+    }
+
+    .navbar-logo p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 1.5rem;
+        color: $color-green-medium;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: row;
+        font:unset;
+        align-items: center;
+        gap: 30px;
+        
+        a {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 0.85rem;
+            font-weight: bolder;
+            color: $color-grey-dark;
+            text-decoration: none; 
+        }
+
+        a:hover{ 
+            color: $color-green-medium;
+        }  
+        
+    }
+}
+
