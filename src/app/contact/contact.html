@@ -1,1 +1,73 @@
-<p style="height: 800px;">contact works!</p>
+<div class="contact-container">
+    <p class="heading">Kontakt</p>
+    <div class="divider"></div>
+    <p class="text more-space">Du möchtest mich kontaktieren? Dann hinterlasse mir gerne eine Nachricht!</p>
+    <div class="form-container">
+        <div class="form">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-group">
+                <div class="field">
+                    <label for="name" class="form-label">Name</label>
+                    <input pInputText type="text" id="name" placeholder="Ihr Name" formControlName="name" [class.ng-invalid]="isInvalid('name')" />
+                    @if (isInvalid('name')) {
+                        <p-message severity="error" size="small" variant="simple">Dein Name wird benötigt.</p-message>
+                    }
+                </div>
+                <div class="field">
+                    <label for="email" class="form-label">E-Mail</label>
+                    <input pInputText type="email" id="email" placeholder="ihre.email@example.com" formControlName="email" [class.ng-invalid]="isInvalid('email')" />
+                    @if (isInvalid('email')) {
+                        @if (contactForm.get('email')?.errors?.['required']) {
+                            <p-message severity="error" size="small" variant="simple">Email wird benötigt</p-message>
+                        }
+                        @if (contactForm.get('email')?.errors?.['email']) {
+                            <p-message severity="error" size="small" variant="simple">Bitte gebe eine gültige E-Mail-Adresse ein.</p-message>
+                        }
+                    }
+                </div>
+                <div class="field">
+                    <label for="message" class="form-label">Nachricht</label>
+                    <textarea pTextarea id="message" placeholder="Wie kann ich Ihnen helfen?" formControlName="message" rows="5" [class.ng-invalid]="isInvalid('message')"></textarea>
+                    @if (isInvalid('message')) {
+                        <p-message severity="error" size="small" variant="simple">Eine Nachricht wird benötigt.</p-message>
+                    }
+                </div>
+                <button pButton type="submit" class="button" [disabled]="isSubmitting">
+                    <span pButtonLabel>{{ isSubmitting ? 'Wird gesendet...' : 'Nachricht senden' }}</span>
+                    <i class="pi pi-send"></i>
+                </button>
+
+                @if (submitSuccess) {
+                    <p class="success-message">Deine Nachricht wurde erfolgreich gesendet!</p>
+                }
+            </form>
+        </div>
+        <div class="contact-box">
+            <div class="info-card">
+                <p class="heading2">Kontaktinformationen</p>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="pi pi-linkedin"></i>
+                    </div>
+                    <div>
+                        <p class="info-label">LinkedIn</p>
+                        <a class="info-value" href="https://www.linkedin.com/in/clara-jung17">linkedin.com/in/clara-jung17</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="pi pi-map-marker"></i>
+                    </div>
+                    <div>
+                        <p class="info-label">Standort</p>
+                        <p class="info-value">Karlsruhe, Deutschland</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-card">
+                <p class="heading2 cta-title">Lass uns ins Gespräch kommen!</p>
+                <p class="cta-text">Du hast eine Frage, ein Anliegen oder möchtest einfach nur Hallo sagen?</p>
+                <p class="cta-text">Ich freue mich auf deine Nachricht und antworte so schnell wie möglich. 😊</p>
+            </div>
+        </div>
+    </div>
+</div>

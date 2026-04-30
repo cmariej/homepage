@@ -66,23 +66,5 @@
         gap: 20px;
         margin: 2.5rem 0;
         
-        .button {
-            font-family: $font-family-default;
-            font-size: $font-size-button;
-            font-weight: 500;
-            color: $color-white;
-            background: linear-gradient(to right, $color-green-medium 50%, $color-green-dark);
-            text-decoration: none; 
-            border-radius: 10em;
-            border: 0px solid transparent;
-            padding: 10px 20px;
-
-            &.reverse-design {
-                color: $color-green-medium;
-                background: $color-green-light;
-                border: 2px solid $color-green-lighter;
-            }
-        } 
-        
     }
 }

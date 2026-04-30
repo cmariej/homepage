@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@import 'primeicons/primeicons.css';
 
 html {
   scroll-behavior: smooth;
@@ -8,3 +9,58 @@ p {
     margin-block-start: 0;
     margin-block-end: 0;
 }
+
+.heading {
+  font-size: $font-size-heading1;
+  padding: 1rem 0 0.6rem 0;
+  margin-top: 1rem;
+}
+
+.heading2 {
+  font-size: $font-size-heading2;
+  padding: 1rem 0 0.6rem 0;
+  margin-top: 1rem;                  
+}
+
+.text {
+    font-size: $font-size-text;
+    font-family: $font-family-default;
+    color: $color-grey-medium;
+}
+
+        
+.divider {
+    width: 4.5rem;
+    height: 3px;
+    background: linear-gradient(to right, $color-green-lighter, $color-green-medium);
+    border-radius: 9999px;
+    margin-bottom: 3rem;
+}
+
+.button {
+    font-family: $font-family-default;
+    font-size: $font-size-button;
+    font-weight: 500;
+    color: $color-white;
+    background: linear-gradient(to right, $color-green-medium 50%, $color-green-dark);
+    text-decoration: none; 
+    border-radius: 10em;
+    border: 0px solid transparent;
+    padding: 10px 20px;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    cursor: pointer;
+
+    &.reverse-design {
+        color: $color-green-medium;
+        background: $color-green-light;
+        border: 2px solid $color-green-lighter;
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+} 

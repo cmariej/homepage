@@ -1,19 +1,16 @@
 import { Component, HostListener, signal } from '@angular/core';
 import { Navbar } from './navbar/navbar';
-import { Home } from "./home/home";
-import { About } from "./about/about";
-import { Contact } from "./contact/contact";
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   imports: [
     Navbar,
-    Home,
-    About,
-    Contact
+    RouterOutlet,
+    RouterLink,
 ],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('homepage');
@@ -22,7 +19,6 @@ export class App {
   @HostListener('window:scroll', [])
   onScroll() {
     this.showButton = window.scrollY > 500;
-    console.log(window.scrollY);
   }
 
   scrollToTop() {

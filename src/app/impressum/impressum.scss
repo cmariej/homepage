@@ -1,0 +1,37 @@
+@use 'variables' as *;
+
+.legal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .legal-section {
+        width: 100%;
+        margin-bottom: 2rem;
+
+        .legal-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: $color-green-dark;
+            margin-bottom: 0.5rem;
+        }
+
+        p, li {
+            color: $color-grey-medium;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        a {
+            color: $color-green-medium;
+            text-decoration: underline;
+        }
+    }
+}

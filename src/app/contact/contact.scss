@@ -1,0 +1,142 @@
+@use 'variables' as *;
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    .more-space {
+            margin-bottom: 2rem;
+        }
+
+    .form-container {
+        padding: 1rem 25rem;
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        align-items: start;
+        height: fit-content;
+        justify-content: center;
+
+        .form {
+            .text {
+                color: $color-green-dark;
+            }
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .success-message {
+                color: $color-grey-dark;
+                font-family: $font-family-default;
+                font-size: 0.9rem;
+                text-align: center;
+                font-style: italic;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .p-message-error.p-message-simple {
+            color: rgb(219, 63, 24);
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+
+            label {
+                font-weight: 500;
+            }
+
+            input, textarea {
+                background-color: $color-green-lightest;
+                border: 2px solid $color-green-lighter;
+                border-radius: 1rem;
+                width: 32rem;
+            } 
+        }
+
+        .contact-box {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .heading2 {
+                padding-top: 0;
+                margin-top: 0;
+            }
+
+            .info-card {
+                background: linear-gradient(to right bottom, $color-green-lightest, $color-green-light 35%);
+                border-radius: 1rem;
+                padding: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.2rem;
+
+                .info-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    .info-icon {
+                        background: linear-gradient(to right bottom, $color-green-lighter, $color-green-medium 30%);
+                        color: white;
+                        width: 3rem;
+                        height: 2.8rem;
+                        border-radius: 0.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        i {
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                    .info-label {
+                        font-size: 0.8rem;
+                        color: #888;
+                    }
+
+                    .info-value {
+                        font-size: $font-size-small-text;
+                        font-weight: 400;
+                        font-family: $font-family-default;
+                        color: #333;
+                    }
+                }
+            }
+
+            .cta-card {
+                background: linear-gradient(to right bottom, $color-green-medium 50%, $color-green-dark);
+                border-radius: 1rem;
+                padding: 2rem 1.5rem 2rem 1.8rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+
+                .cta-title {
+                    font-size: $font-size-heading2;
+                    font-weight: 500;
+                    color: white;
+                }
+
+                .cta-text {
+                    font-size: 1rem;
+                    color: white;
+                    opacity: 0.9;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
