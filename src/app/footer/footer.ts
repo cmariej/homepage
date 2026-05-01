@@ -10,4 +10,8 @@ import { RouterLink } from '@angular/router';
 export class Footer {
   year = new Date().getFullYear();
   text = `© ${this.year} Clara Jung, Deutschland — Gemacht mit ‪‪❤︎‬ `;
+
+  scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 }
