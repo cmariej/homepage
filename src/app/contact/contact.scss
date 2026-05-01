@@ -6,27 +6,30 @@
     align-items: center;
     margin-bottom: 4rem;
 
+    .text {
+        color: $color-green-dark;
+        text-align: center;
+        padding: 1rem 3rem;
+    }
+
     .more-space {
             margin-bottom: 2rem;
         }
 
     .form-container {
-        padding: 1rem 25rem;
         display: flex;
         flex-direction: row;
         gap: 3rem;
         align-items: start;
         height: fit-content;
         justify-content: center;
+        width: 100%;
 
         .form {
-            .text {
-                color: $color-green-dark;
-            }
-            
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 5rem;
 
             .success-message {
                 color: $color-grey-dark;
@@ -41,7 +44,7 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
-            width: 100%;
+            width: 32rem;
         }
 
         .p-message-error.p-message-simple {
@@ -55,13 +58,14 @@
 
             label {
                 font-weight: 500;
+                width:100%;
             }
 
             input, textarea {
                 background-color: $color-green-lightest;
                 border: 2px solid $color-green-lighter;
                 border-radius: 1rem;
-                width: 32rem;
+                width: 100%;
             } 
         }
 
@@ -141,14 +145,28 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: $max-size-tablet) {
     .contact-container > .form-container {
         flex-direction: column;
-        padding: 1rem 3rem;
-
-        .field {
-            max-width: 100%;
-            width: unset;
+        align-items: center;
+        
+        .form {
+            padding: 1rem 3rem;
+            width: 100%;
         }
+
+        .formgroup {
+            width: 32rem;
+        }
+
+        .contact-box, .text {
+            padding: 1rem 3rem;
+        }
+    }
+}
+
+@media (max-width: $max-size-mobile) {
+    .contact-container .form-container .form-group {
+        width: 100%;
     }
 }

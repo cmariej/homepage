@@ -71,7 +71,7 @@
     }  
 }
 
-@media (max-width: 1024px) {
+@media (max-width: $max-size-tablet) {
     .home {
         padding: 3rem 0 1rem 0;
 

@@ -46,7 +46,7 @@
     }   
 }
 
-@media (max-width: 1024px) {
+@media (max-width: $max-size-tablet) {
     .navbar {
         flex-direction: column;
         padding: 1.5rem 2rem;
