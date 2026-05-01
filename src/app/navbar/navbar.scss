@@ -12,6 +12,7 @@
         display: flex;
         align-items: center;
         min-height: fit-content;
+        justify-content: center;
     }
 
     div {
@@ -42,6 +43,13 @@
         a:hover{ 
             color: $color-green-medium;
         }    
-    }
+    }   
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1.5rem 2rem;
+    }   
 }
 

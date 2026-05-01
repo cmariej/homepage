@@ -1,5 +1,9 @@
 @use 'variables' as *;
 
+.app {
+  width: auto;
+}
+
 .to-top {
   position: fixed;
   bottom: 20px;
@@ -21,14 +25,4 @@
 .to-top.show {
   opacity: 1;
   pointer-events: auto;
-}
-
-.impressum {
-  display: block;
-  padding: 0 5rem 3rem 5rem;
-  text-align: center;
-  width: 100%;
-  font-size: $font-size-small-text;
-  font-family: $font-family-default;
-  color: $color-grey-medium;
 }

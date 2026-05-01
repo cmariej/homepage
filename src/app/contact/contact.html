@@ -9,7 +9,7 @@
                     <label for="name" class="form-label">Name</label>
                     <input pInputText type="text" id="name" placeholder="Ihr Name" formControlName="name" [class.ng-invalid]="isInvalid('name')" />
                     @if (isInvalid('name')) {
-                        <p-message severity="error" size="small" variant="simple">Dein Name wird benötigt.</p-message>
+                        <p-message severity="error" size="small" variant="simple">Dein Name wird benötigt</p-message>
                     }
                 </div>
                 <div class="field">
@@ -20,7 +20,7 @@
                             <p-message severity="error" size="small" variant="simple">Email wird benötigt</p-message>
                         }
                         @if (contactForm.get('email')?.errors?.['email']) {
-                            <p-message severity="error" size="small" variant="simple">Bitte gebe eine gültige E-Mail-Adresse ein.</p-message>
+                            <p-message severity="error" size="small" variant="simple">Bitte gib eine gültige E-Mail-Adresse ein</p-message>
                         }
                     }
                 </div>
@@ -28,7 +28,7 @@
                     <label for="message" class="form-label">Nachricht</label>
                     <textarea pTextarea id="message" placeholder="Wie kann ich Ihnen helfen?" formControlName="message" rows="5" [class.ng-invalid]="isInvalid('message')"></textarea>
                     @if (isInvalid('message')) {
-                        <p-message severity="error" size="small" variant="simple">Eine Nachricht wird benötigt.</p-message>
+                        <p-message severity="error" size="small" variant="simple">Eine Nachricht wird benötigt</p-message>
                     }
                 </div>
                 <button pButton type="submit" class="button" [disabled]="isSubmitting">

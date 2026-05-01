@@ -24,7 +24,20 @@
 
         
         .text {
-            justify-self: center;
+            text-align: justify;
         }
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-container {
+        .about {
+            flex-direction: column;
+            padding: 1rem 10rem;
+
+            .pic {
+                width: 15rem;
+            }
+        } 
     }
 }

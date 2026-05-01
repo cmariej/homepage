@@ -9,6 +9,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class Navbar {
   activeSection = 'home';
+  menuOpen = false;
 
   @HostListener('window:scroll', [])
   onScroll() {
@@ -24,5 +25,9 @@ export class Navbar {
         this.activeSection = id;
       }
     }
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 }

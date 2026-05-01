@@ -1,13 +1,14 @@
 import { Component, HostListener, signal } from '@angular/core';
 import { Navbar } from './navbar/navbar';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
+import { Footer } from "./footer/footer";
 
 @Component({
   selector: 'app-root',
   imports: [
     Navbar,
     RouterOutlet,
-    RouterLink,
+    Footer
 ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
