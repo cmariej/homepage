@@ -64,3 +64,13 @@ p {
       cursor: default;
     }
 } 
+
+@media (max-width: $max-size-mobile) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .heading2 {
+    font-size: 1.3rem;                 
+  }
+}
