@@ -41,3 +41,17 @@
         } 
     }
 }
+
+@media (max-width: 768px) {
+    .about-container {
+        .about {
+            flex-direction: column;
+            padding: 1rem 3rem;
+
+            .pic {
+                width: 10rem;
+                height: 10rem;
+            }
+        } 
+    }
+}

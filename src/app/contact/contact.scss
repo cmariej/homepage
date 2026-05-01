@@ -143,6 +143,12 @@
 
 @media (max-width: 1024px) {
     .contact-container > .form-container {
-     flex-direction: column;
+        flex-direction: column;
+        padding: 1rem 3rem;
+
+        .field {
+            max-width: 100%;
+            width: unset;
+        }
     }
 }
