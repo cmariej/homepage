@@ -60,6 +60,8 @@ export class Contact {
     return control?.invalid && (control.touched || this.formSubmitted);
   }
 }
+
+// https://dashboard.emailjs.com/admin
 // templateID: template_gcuvzz9
 // serviceID: service_39zvsce
 // publicKey: N2VyJjNZ-6ixZ6vHf
